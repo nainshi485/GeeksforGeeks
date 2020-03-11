@@ -1,0 +1,41 @@
+Given two numbers M and N. The task is to find the position of rightmost different bit in binary representation of numbers.
+
+Input:
+The input line contains T, denoting the number of testcases. Each testcase follows. First line of each testcase contains two space separated integers M and N.
+
+Output:
+For each testcase in new line, print the position of rightmost different bit in binary representation of numbers. If both M and N are same then print -1 in this case.
+
+Constraints:
+1 <= T <= 100
+1 <= M <= 103
+1 <= N <= 103
+
+Example:
+Input:
+2
+11 9
+52 4
+
+Output:
+2
+5
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--)
+	{
+	    int n,m;
+	    cin>>n>>m;
+	    int test=n^m;
+	    cout<<log2(test&-test)+1<<endl;
+	}
+	return 0;
+}
